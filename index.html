@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Андрей и Екатерина</title>
+    <meta name="description" content="Свадебное приглашение">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aniыыыыmate.css/4.1.1/animate.min.css"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap" rel="stylesheet">
+
+    <style>
+    .schedule-section img {
+        width: 120px !important;
+        height: 120px !important;
+    }
+    @font-face {
+        font-family: 'Scarlet';
+        src: url('https://waitforyou.ru/media/Fonts/Scarlet.otf') format('opentype');
+        font-weight: normal;
+        font-style: normal;
+    }
+        .schedule-section {
+            text-align: center;
+            padding: 60px 20px;
+            color: #000000;
+        }
+        .schedule-section h2 {
+            font-family: 'Scarlet', serif;
+            font-size: 40px;
+            font-weight: normal;
+            margin-bottom: 10px;
+        }
+        /* Timeline schedule-section override for new layout */
+        .schedule-section .text-2xl {
+            font-family: 'Scarlet', serif;
+            font-size: 30px;
+            font-weight: normal;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+        .schedule-section .text-4xl {
+            font-family: 'Scarlet', serif;
+            font-size: 32px;
+            font-weight: normal;
+            margin-bottom: 0;
+        } 
+        .schedule-section p {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+        .schedule-section .text-sm {
+            font-size: 16px;
+        }
+        /* Timeline event-item layout (tailwind-like utility classes) */
+        .schedule-section .container {
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+        .schedule-section .event-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+        .schedule-section .w-2\/3 { width: 66.666667%; }
+        .schedule-section .w-1\/3 { width: 33.333333%; }
+        .schedule-section .flex { display: flex; }
+        .schedule-section .items-center { align-items: center; }
+        .schedule-section .justify-end { justify-content: flex-end; }
+        .schedule-section .text-left { text-align: left; }
+        .schedule-section .rounded-full { border-radius: 9999px; }
+        .schedule-section .object-cover { object-fit: cover; }
+        .schedule-section .space-x-4 > :not(:last-child) { margin-right: 1rem; }
+        .schedule-section .mt-2 { margin-top: 0.5rem; }
+        .schedule-section .space-y-12 > :not(:last-child) { margin-bottom: 3rem; }
+        /* Animation keyframes and classes */
+        @keyframes fadeInLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-40px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        .fade-in-left {
+            opacity: 0;
+        }
+        .fade-in-left.visible {
+            animation: fadeInLeft 1s ease forwards;
+        }
+        @keyframes slideInFromLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-60px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        @keyframes slideInFromRight {
+            0% {
+                opacity: 0;
+                transform: translateX(60px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        .animate-slide-in-left {
+            opacity: 0;
+            animation: slideInFromLeft 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+        /* Universal animation class for schedule-section */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateX(60px);
+        }
+        .animate-on-scroll.visible {
+            animation: slideInFromRight 1s cubic-bezier(0.4,0,0.2,1) forwards;
+        }
+        .custom-section {
+            text-align: center;
+            padding: 60px 20px;
+            color: #000000;
+        }
+        .custom-section h2 {
+            font-family: 'Viaoda Libre', serif;
+            font-size: 32px;
+            letter-spacing: 2px;
+        }
+        .custom-section p {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 17px;
+            margin-top: 20px;
+            line-height: 1.6;
+        }
+        :root {
+            --theme-heading-color: #143211;
+            --theme-text-color: #143211;
+            --theme-text-size-h2: 30px;
+            --theme-text-size-md: 17px;
+            --theme-heading-font-family: 'Merriweather', serif;
+            --theme-font-family: 'Open Sans', sans-serif;
+            --vh: 1vh;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            width: 100%;
+            min-height: 100vh;
+            min-height: calc(var(--vh, 1vh) * 100);
+            overflow-x: hidden;
+            background-color: #fff;
+            font-family: var(--theme-font-family);
+            color: var(--theme-text-color);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* === Fullscreen video background fix for mobile === */
+        :root {
+            --vh: 1vh;
+        }
+
+        html, body {
+            height: 100%;
+            min-height: 100%;
+            overflow-x: hidden;
+        }
+
+        .page-background-video {
+            position: fixed;
+            inset: 0;
+            width: 100vw;
+            height: calc(var(--vh) * 100);
+            min-height: 100dvh;
+            min-height: -webkit-fill-available;
+            z-index: -2;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .page-background-video video {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            pointer-events: none;
+            will-change: transform;
+            backface-visibility: hidden;
+        }
+
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            height: calc(var(--vh, 1vh) * 100);
+            background-color: #fff;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 1.2s cubic-bezier(0.45, 0, 0.55, 1);
+            opacity: 1;
+        }
+
+        #loading-screen.unlocked {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        #loading-screen .video-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1001;
+        }
+
+        .slider-content {
+            position: relative;
+            z-index: 1002;
+            bottom: -27vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            color: white;
+            text-align: center;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+            transition: opacity 0.8s cubic-bezier(0.5, 1, 0.89, 1);
+            opacity: 1;
+        }
+
+        .slider-content.unlocked {
+            opacity: 0;
+        }
+
+        .slider-content h2 {
+            font-family: var(--theme-heading-font-family);
+            font-size: var(--theme-text-size-h2);
+            font-weight: 700;
+            margin-bottom: 20px;
+            position: relative;
+            top: -10%;
+        }
+        .slider-content p {
+            font-size: var(--theme-text-size-md);
+            margin-bottom: 10px;
+            position: relative;
+            top: -10%;
+        }
+
+        .slider-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 340px; /* увеличил, чтобы было больше расстояние */
+            height: 60px;
+        }
+
+        .slider-track-bg {
+            position: absolute;
+            right: 0;
+            width: 55px;
+            height: 55px;
+            border: 1px solid #ffffff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slider-track-text { 
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: calc(100% - 100px); /* отступы равны диаметрам кругов */
+            height: 1px;
+            background-image: repeating-linear-gradient(to right, #ffffff 0, #ffffff 6px, transparent 6px, transparent 12px);
+            transform: translate(-50%, -50%);
+            z-index: 0;
+        }
+
+        .slider-handle {
+            position: absolute;
+            left: 0;
+            width: 45px;
+            height: 45px;
+            background-color: #ffffff;
+            border-radius: 50%;
+            cursor: grab;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            touch-action: none;
+            user-select: none; 
+        }
+        .slider-handle svg {
+            width: 10px;
+            height: 20px;
+        }
+
+        .mute-button {
+            position: fixed;
+            top: 16px;
+            left: 16px;
+            display: none;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+            z-index: 9999;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+        }
+        .mute-icon-wrapper {
+            background: black;
+            border-radius: 50%;
+            padding: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .mute-icon {
+            width: 24px;
+            height: 24px;
+        }
+        .mute-label {
+            color: white;
+            font-size: 0.9em;
+            font-weight: 300;
+            font-family: 'Playfair Display', serif;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.7);
+        }
+
+        main {
+            width: 100%;
+            overflow: hidden;
+        }
+        
+        .block-item {
+            opacity: 0;
+            visibility: hidden;
+            width: 100%;
+        }
+        
+        .block-item.is-visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .block-banner .picture-container {
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: block;
+            position: relative;
+        }
+        .block-banner {
+            margin-top: var(--banner-margin-top, 0);
+        }
+
+        .block-banner a {
+            display: block;
+            text-decoration: none;
+        }
+
+        #rsvp-container {
+            font-family: 'Open Sans', sans-serif;
+            color: #000000;
+            background: transparent;
+            max-width: 400px;
+            margin: 0 auto;
+            font-size: 17px;
+            padding: 40px 20px;
+        }
+        #rsvp-container label {
+            display: flex;
+            align-items: center;
+            margin: 12px 0 6px;
+            font-weight: normal;
+        }
+        #rsvp-container label.heading {
+            font-weight: 600;
+            display: block;
+        }
+        #rsvp-container input[type="text"] {
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid #000000;
+            padding: 8px 4px;
+            background: transparent;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 14px;
+            color: #000000;
+            outline: none;
+        }
+        #rsvp-container input[type="radio"] {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #000000;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+            cursor: pointer;
+            position: relative;
+            flex-shrink: 0;
+        }
+        #rsvp-container input[type="radio"]:checked::after {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background: #000000;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        #rsvp-container button {
+            display: block;
+            width: 100%;
+            max-width: 220px;
+            padding: 12px 24px;
+            margin: 30px auto 20px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            color: #000000;
+            background-color: transparent;
+            border: 2px solid #000000;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        #rsvp-container button:hover {
+            background-color: #000000;
+            color: #FFFFFF;
+        }
+
+        .timer-wrapper {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 20;
+        }
+        .address-section {
+            text-align: center;
+            padding: 40px 20px;
+            color: #000000;
+        }
+        .address-section p {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 18px;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        .map-button {
+            display: inline-block;
+            padding: 12px 24px;
+            border: 2px solid #000000;
+            border-radius: 6px;
+            text-decoration: none;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            color: #000000;
+            transition: background 0.3s, color 0.3s;
+        }
+        .map-button:hover {
+            background: #000000;
+            color: #ffffff;
+        }
+        .note-section {
+            text-align: center;
+            padding: 40px 20px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #000000;
+        }
+        /* Dress code circles */
+        .dress-code {
+            margin-top: 18px;
+        }
+        .dress-code .circles-row {
+            display: flex;
+            justify-content: center;
+            margin: 10px 0;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .dress-code .circles-row .circle:first-child {
+            margin-left: 0;
+        } 
+        .dress-code .circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-size: cover;
+            background-position: center;
+            border: 1px solid rgba(0,0,0,0.15);
+            opacity: 0;
+            transform: translateX(-40px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .dress-code .circle.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        /* Countdown Timer Styles */
+        .countdown-timer {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 40px auto;
+        }
+        .circle-timer {
+            width: 100px;
+            height: 100px;
+            border: 2px solid #000;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 18px;
+        }
+        .circle-timer span {
+            font-size: 26px;
+            font-weight: bold;
+        }
+        #rsvp-form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        #rsvp-form label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        #rsvp-form input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        #rsvp-form input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        #rsvp-form button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        #rsvp-form button:hover {
+            background-color: #45a049;
+        }
+
+        #rsvp-form button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+
+        #form-message {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+    </style>
+    <style>
+    @media (max-width: 480px) {
+        /* .schedule-section img {
+            width: 70px !important;
+            height: 70px !important;
+        } */
+        .schedule-section .time-circle {
+            width: 60px;
+            height: 60px;
+            font-size: 16px;
+        }
+    }
+    @media (max-width: 600px) {
+        .countdown-timer {
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .circle-timer {
+            width: 85px;
+            height: 85px;
+            font-size: 14px;
+            margin: 5px;
+        }
+        .circle-timer span {
+            font-size: 18px;
+        }
+    }
+    </style>
+
+
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+    <div id="loading-screen">
+        <video class="video-bg" autoplay loop muted playsinline>
+            <source src="video/loader.mp4" type="video/mp4">
+        </video>
+        <div class="slider-content">
+            <h2>ПРИВЕТ!</h2>
+            <p>Разблокируй приглашение</p>
+            <div class="slider-container">
+                <div class="slider-handle">
+                    <svg viewBox="0 0 44 82" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.00017 2.81623L40.1839 41L2.00017 79.1838" stroke="#9E9E9E" stroke-width="10" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <div class="slider-track-text"></div>
+                <div class="slider-track-bg"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-background-video">
+        <video autoplay muted loop playsinline>
+            <source src="video/background.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <audio id="background-music" loop src="audio/volna.mp3"></audio>
+    <div class="mute-button">
+        <div class="mute-icon-wrapper">
+            <img class="mute-icon" src="https://img.icons8.com/?size=100&id=vI9d0s6ZRxxX&format=png&color=FFFFFF" alt="Mute icon">
+        </div>
+        <span class="mute-label">← Выключить звук музыки</span>
+    </div>
+
+    <main>
+        <div class="block-item block-banner b-80067119" style="--banner-margin-top: 0;">
+            <div class="picture-container" style="padding-top: 100%; background-image: url('images/i.webp');"></div>
+        </div>
+        <div class="block-item custom-section">
+            <h2>ДОРОГИЕ ГОСТИ</h2>
+            <p>В этом году один день станет для нас особенно значимым. Мы планируем отметить его в компании родных и друзей. С радостью приглашаем вас на важное событие — нашу свадьбу!</p>
+        </div>
+        <div class="block-item block-banner b-80067124" style="--banner-margin-top: 70px;">
+            <div class="picture-container" style="padding-top: 80%; background-image: url(images/date.png);"></div>
+        </div>
+        <div class="block-item block-banner b-80067126" style="--banner-margin-top: 70px;">
+            <div class="picture-container" style="padding-top: 30%; background-image: url('https://waitforyou.ru/media/Photos/Photos/66108973.png');"></div>
+        </div>
+        <div class="block-item schedule-section">
+        <div class="container mx-auto px-4 py-8 space-y-12">
+          <div class="flex items-center space-x-4 event-item">
+            <div class="w-2/3 text-left fade-in-left" data-delay="0">
+              <h2 class="text-2xl font-bold tracking-wider fade-in-left">СБОР ГОСТЕЙ</h2>
+              <p class="text-4xl font-bold fade-in-left">16:00</p>
+              <p class="mt-2 text-sm text-gray-600 dark:text-gray-400 fade-in-left">встречаемся, настраиваемся на веселую свадьбу, главное не опаздывать.</p>
+            </div>
+            <div class="w-1/3 flex justify-end animate-on-scroll" data-delay="0">
+              <img alt="Guests gathering" class="w-24 h-24 rounded-full object-cover animate-on-scroll" data-delay="0" src="https://waitforyou.ru/media/Photos/Photos/программа дня/image.png"/>
+            </div>
+          </div>
+          <div class="flex items-center space-x-4 event-item">
+            <div class="w-2/3 text-left fade-in-left" data-delay="0.4">
+              <h2 class="text-2xl font-bold tracking-wider fade-in-left">ВЫЕЗДНАЯ ЦЕРЕМОНИЯ</h2>
+              <p class="text-4xl font-bold fade-in-left">16:30</p>
+              <p class="mt-2 text-sm text-gray-600 dark:text-gray-400 fade-in-left">немного радостных трогательных формальностей - то ради чего собирались.</p>
+            </div>
+            <div class="w-1/3 flex justify-end animate-on-scroll" data-delay="0.4">
+              <img alt="Wedding ceremony" class="w-24 h-24 rounded-full object-cover animate-on-scroll" data-delay="0.4" src="https://waitforyou.ru/media/Photos/Photos/программа дня/image-1.png"/>
+            </div>
+          </div>
+          <div class="flex items-center space-x-4 event-item">
+            <div class="w-2/3 text-left fade-in-left" data-delay="0.8">
+              <h2 class="text-2xl font-bold tracking-wider fade-in-left">НАЧАЛО БАНКЕТА</h2>
+              <p class="text-4xl font-bold fade-in-left">17:00</p>
+              <p class="mt-2 text-sm text-gray-600 dark:text-gray-400 fade-in-left">самое время для вкусной еды, развлечений и поздравлений.</p>
+            </div>
+            <div class="w-1/3 flex justify-end animate-on-scroll" data-delay="0.8">
+              <img alt="Banquet hall" class="w-24 h-24 rounded-full object-cover animate-on-scroll" data-delay="0.8" src="https://waitforyou.ru/media/Photos/Photos/программа дня/image-2.png"/>
+            </div>
+          </div>
+          <div class="flex items-center space-x-4 event-item">
+            <div class="w-2/3 text-left fade-in-left" data-delay="1.2">
+              <h2 class="text-2xl font-bold tracking-wider fade-in-left">ЗАВЕРШЕНИЕ ВЕЧЕРА</h2>
+              <p class="text-4xl font-bold fade-in-left">23:00</p>
+              <p class="mt-2 text-sm text-gray-600 dark:text-gray-400 fade-in-left">
+                к сожалению, даже<br>
+                такой приятный<br>
+                вечер заканчивается.
+              </p>
+            </div>
+            <div class="w-1/3 flex justify-end animate-on-scroll" data-delay="1.2">
+              <img alt="Sparklers at night" class="w-24 h-24 rounded-full object-cover animate-on-scroll" data-delay="1.2" src="https://waitforyou.ru/media/Photos/Photos/программа дня/image-3.png"/>
+            </div>
+          </div>
+        </div> 
+        </div>
+        <div class="block-item block-banner b-80067166" style="--banner-margin-top: 0;">
+            <div class="picture-container" style="padding-top: 17.2%; background-image: url('https://waitforyou.ru/media/Photos/Photos/TPqMuVR1DN.png');"></div>
+            <a href="https://yandex.ru/maps/org/shinok_pervach/1372930503/?ll=137.014129%2C50.532049&z=14" target="_blank" rel="noopener">
+                <div class="picture-container" style="padding-top: 80%; background-image: url(images/XXXL.png);"></div>
+            </a>
+        </div>
+        <div class="block-item address-section">
+            <p>Будем ждать вас по адресу:<br>
+            Ресторан Шинок Первач<br>
+            по адресу: Комсомольск-на-Амуре, <br>
+            улица Дзержинского, 34/5</p>
+            <a href="https://yandex.ru/maps/org/shinok_pervach/1372930503/?ll=137.014129%2C50.532049&z=14" target="_blank" class="map-button">Посмотреть на карте</a>
+        </div>
+        <div class="block-item block-banner b-80067212" style="--banner-margin-top: 70px;">
+            <div class="picture-container" style="padding-top: 23%; background-image: url('https://waitforyou.ru/media/Photos/Photos/66109084.png');"></div>
+        </div>
+        <div class="block-item note-section">
+            Мы очень старались сделать праздник красивым и будем рады, если в своих нарядах Вы поддержите цветовую гамму нашей свадьбы:
+            <div class="dress-code">
+              <!-- Ряд кружков -->
+              <div class="circles-row">
+                <div class="circle" style="background-image: url('images/colors/choco.png');"></div>
+                <div class="circle" style="background-image: url('images/colors/cream.png');"></div>
+                <div class="circle" style="background-image: url('images/colors/darkgreen.png');"></div>
+                <div class="circle" style="background-image: url('images/colors/lightbrown.png');"></div>
+                <div class="circle" style="background-image: url('images/colors/olive.png');"></div>
+              </div>
+            </div>
+        </div>
+        </div>
+        <div class="block-item block-banner b-80067202" style="--banner-margin-top: 0;">
+            <div class="picture-container" style="padding-top: 23%; background-image: url('https://waitforyou.ru/media/Photos/Photos/Slice 12.png');"></div>
+        </div>
+        <div class="block-item note-section animate__animated" style="--banner-margin-top: 20px;">
+            <p style="margin-bottom:30px;">Мы не хотим обременять Вас выбором подарка, поэтому будем рады подарку в конверте, который пойдет на осуществление нашей мечты.</p>
+            <p>Просим Вас не дарить нам цветы - мы не успеем насладиться их красотой до отъезда. А вот бутылочке вина для нашей семейной винотеки или счастливому лотерейному билету будем очень рады!</p>
+        </div>
+        <div class="block-item block-banner b-80067213" style="--banner-margin-top: 30px;">
+            <div class="picture-container" style="padding-top: 20%; background-image: url('https://waitforyou.ru/media/Photos/Photos/qYPGe8vqnq.png');"></div>
+        </div>
+        <div class="block-item note-section">
+            <p>По всем вопросам обращайтесь<br>
+            <strong>Жених</strong><br>
+            +7 (929) 407-47-73<br>
+            <strong>Невеста</strong><br>
+            +7 (909) 826-07-74</p>
+        </div>
+        <div class="block-item block-banner b-80067216" style="--banner-margin-top: 30px;">
+            <div class="picture-container" style="padding-top: 23%; background-image: url('https://waitforyou.ru/media/Photos/Photos/Slice 16.png');"></div>
+        </div>
+        
+
+        <div class="block-item block-html b-80067270">
+    <div id="rsvp-container">
+        <form id="rsvp-form">
+            <label class="heading" for="fio">Напишите, пожалуйста, Ваше имя и фамилию</label>
+            <input type="text" id="fio" name="fio" placeholder="Ваше имя и фамилия" required />
+            
+            <div style="margin-top: 40px;"></div>
+            
+            <label class="heading">Сможете ли присутствовать на нашем торжестве?</label>
+            <label>
+                <input type="radio" name="attendance" value="Я с удовольствием приду" required /> 
+                Я с удовольствием приду
+            </label>
+            <label>
+                <input type="radio" name="attendance" value="К сожалению, не смогу присутствовать" /> 
+                К сожалению, не смогу присутствовать
+            </label>
+            <label>
+                <input type="radio" name="attendance" value="Сообщу позже" /> 
+                Сообщу позже
+            </label>
+            
+            <button type="submit" id="submit-btn">Отправить</button>
+        </form>
+        <div id="form-message" style="margin-top: 20px; font-weight: bold; text-align: center; padding: 10px; border-radius: 5px;"></div>
+    </div>
+</div>
+
+        </div>
+        <div class="block-item block-banner b-80067216" style="--banner-margin-top: 30px;">
+            <div class="picture-container" style="padding-top: 10%; background-image: url('https://waitforyou.ru/media/Photos/Photos/Slice 20.png');"></div>
+        </div>
+        <!-- Countdown Timer Block -->
+        <div class="countdown-timer">
+            <div class="circle-timer"><span id="days">0</span><div>Дни</div></div>
+            <div class="circle-timer"><span id="hours">0</span><div>Часы</div></div>
+            <div class="circle-timer"><span id="minutes">0</span><div>Минуты</div></div>
+            <div class="circle-timer"><span id="seconds">0</span><div>Секунды</div></div>
+        </div>
+        <div class="block-item block-banner b-80067216" style="--banner-margin-top: 60px;">
+            <div class="picture-container" style="padding-top: 40%; background-image: url('https://waitforyou.ru/media/Photos/Photos/Slice 17.png');"></div>
+        </div>
+        </div>
+    </main>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        
+        function setVh() {
+            const vh = window.visualViewport
+                ? window.visualViewport.height * 0.01
+                : window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+        }
+        setVh();
+        window.addEventListener('resize', setVh);
+        window.visualViewport && window.visualViewport.addEventListener('resize', setVh);
+
+        const sliderHandle = document.querySelector('.slider-handle');
+        const sliderContainer = document.querySelector('.slider-container');
+        const loadingScreen = document.getElementById('loading-screen');
+        const sliderContent = document.querySelector('.slider-content');
+
+        let isDragging = false;
+        let startX = 0;
+        let currentX = 0;
+        let maxOffset = (sliderContainer.offsetWidth - sliderHandle.offsetWidth) * 0.99;
+
+        function startDrag(event) {
+            if (event.cancelable) {
+                event.preventDefault();
+            }
+            isDragging = true;
+            const clientX = event.type === 'touchstart' ? event.touches[0].clientX : event.clientX;
+            startX = clientX - sliderHandle.offsetLeft;
+            sliderHandle.style.transition = 'none';
+        }
+
+        function drag(event) {
+            if (isDragging === false) {
+                return;
+            }
+            if (event.cancelable) {
+                event.preventDefault();
+            }
+            const clientX = event.type === 'touchmove' ? event.touches[0].clientX : event.clientX;
+            currentX = clientX - startX;
+            currentX = Math.max(0, Math.min(currentX, maxOffset));
+            sliderHandle.style.left = currentX + 'px';
+        }
+
+        function endDrag(event) {
+            if (isDragging === false) {
+                return;
+            }
+            isDragging = false;
+            
+            if (currentX >= maxOffset) {
+                unlockPage();
+            } else {
+                sliderHandle.style.transition = 'left 0.4s ease-out';
+                sliderHandle.style.left = '0px';
+            }
+        }
+        
+        function unlockPage() {
+            loadingScreen.classList.add('unlocked');
+            sliderContent.classList.add('unlocked');
+            startAudioPlayback();
+            setTimeout(function() {
+                loadingScreen.remove();
+            }, 1200);
+        }
+
+        sliderHandle.addEventListener('mousedown', startDrag);
+        document.addEventListener('mousemove', drag);
+        document.addEventListener('mouseup', endDrag);
+        sliderHandle.addEventListener('touchstart', startDrag, { passive: false });
+        document.addEventListener('touchmove', drag, { passive: false });
+        document.addEventListener('touchend', endDrag);
+
+        window.addEventListener('resize', function() {
+            maxOffset = (sliderContainer.offsetWidth - sliderHandle.offsetWidth) * 0.99;
+        });
+
+        const audio = document.getElementById('background-music');
+        const muteBtn = document.querySelector('.mute-button');
+        const muteIcon = document.querySelector('.mute-icon');
+        let audioStarted = false;
+
+        async function startAudioPlayback() {
+            if (audioStarted === true) {
+                return;
+            }
+            try {
+                await audio.play();
+                audioStarted = true;
+                muteBtn.style.display = 'flex';
+            } catch (error) {
+                console.error("Audio autoplay failed:", error);
+                
+                let fallbackListener = function() {
+                    audio.play();
+                    muteBtn.style.display = 'flex';
+                    document.body.removeEventListener('click', fallbackListener);
+                    document.body.removeEventListener('touchstart', fallbackListener);
+                };
+                document.body.addEventListener('click', fallbackListener);
+                document.body.addEventListener('touchstart', fallbackListener);
+            }
+        }
+        
+        muteBtn.addEventListener('click', function() {
+            audio.muted = !audio.muted;
+            muteIcon.src = audio.muted
+                ? 'https://img.icons8.com/?size=100&id=7913&format=png&color=FFFFFF'
+                : 'https://img.icons8.com/?size=100&id=vI9d0s6ZRxxX&format=png&color=FFFFFF';
+        });
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    const target = entry.target;
+                    
+                    target.classList.add('is-visible', 'animate__animated');
+                    
+                    let animationName = 'animate__fadeIn';
+                    let animationDuration = '1s';
+
+                    if (target.classList.contains('b-80067120')) {
+                         animationName = 'animate__zoomIn';
+                         animationDuration = '2.6s';
+                    }
+
+                    target.style.animationName = animationName.replace('animate__', '');
+                    target.style.animationDuration = animationDuration;
+
+                    observer.unobserve(target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.block-item').forEach(function(element) {
+            observer.observe(element);
+        });
+        
+       
+        // Dress code circles animation
+        const circles = document.querySelectorAll('.dress-code .circle');
+        if (circles.length) {
+            const circleObserver = new IntersectionObserver((entries, obs) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        circles.forEach((circle, index) => {
+                            setTimeout(() => {
+                                circle.classList.add('visible');
+                            }, index * 200); // 0.2s delay each, left to right
+                        });
+                        obs.disconnect();
+                    }
+                });
+            }, { threshold: 0.3 });
+            circles.forEach(c => circleObserver.observe(c));
+        }
+    });
+    // Timeline animation observer for schedule-section
+    (function() {
+      var scheduleSection = document.querySelector('.schedule-section');
+      if (!scheduleSection) return;
+      var animatedBlocks = scheduleSection.querySelectorAll('.animate-on-scroll, .fade-in-left');
+      if (!animatedBlocks.length) return;
+      var observer = new IntersectionObserver(function(entries, obs) {
+          entries.forEach(function(entry) {
+              if (entry.isIntersecting) {
+                  var el = entry.target;
+                  var delay = el.dataset.delay || 0;
+                  setTimeout(() => {
+                      el.classList.add('visible');
+                  }, delay * 1000);
+                  obs.unobserve(el);
+              }
+          });
+      }, { threshold: 0.2 });
+      animatedBlocks.forEach(el => observer.observe(el));
+    })();
+    // Countdown Timer - 20 июня 2026
+const countdownDate = new Date("Jun 20, 2026 00:00:00").getTime();
+const timerElements = {
+    days: document.getElementById("days"),
+    hours: document.getElementById("hours"),
+    minutes: document.getElementById("minutes"),
+    seconds: document.getElementById("seconds")
+};
+
+// Проверяем, что все элементы найдены
+if (timerElements.days && timerElements.hours && timerElements.minutes && timerElements.seconds) {
+    setInterval(() => {
+        const now = new Date().getTime();
+        const distance = countdownDate - now;
+        
+        // Расчет времени
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+        // Обновление элементов с ведущими нулями
+        timerElements.days.textContent = days >= 0 ? days.toString().padStart(2, '0') : "00";
+        timerElements.hours.textContent = hours >= 0 ? hours.toString().padStart(2, '0') : "00";
+        timerElements.minutes.textContent = minutes >= 0 ? minutes.toString().padStart(2, '0') : "00";
+        timerElements.seconds.textContent = seconds >= 0 ? seconds.toString().padStart(2, '0') : "00";
+        
+        // Если таймер закончился
+        if (distance < 0) {
+            timerElements.days.textContent = "00";
+            timerElements.hours.textContent = "00";
+            timerElements.minutes.textContent = "00";
+            timerElements.seconds.textContent = "00";
+            console.log("Свадьба состоялась! 🎉");
+        }
+    }, 1000);
+} else {
+    console.error("Элементы таймера не найдены на странице");
+}
+    
+
+    document.getElementById('rsvp-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+    
+    // Получаем имя
+    const fio = document.getElementById('fio').value.trim();
+    
+    // Получаем выбранный вариант
+    let attendance = '';
+    const radios = document.querySelectorAll('input[name="attendance"]');
+    for (let radio of radios) {
+        if (radio.checked) {
+            attendance = radio.value;
+            break;
+        }
+    }
+    
+    // Проверка заполнения
+    if (!fio || !attendance) {
+        showMessage('Пожалуйста, заполните все поля!', 'error');
+        return;
+    }
+    
+    // Блокируем кнопку, чтобы не отправили дважды
+    const submitBtn = document.getElementById('submit-btn');
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Отправка...';
+    
+    showMessage('⏳ Отправка...', 'sending');
+    
+    // ВАЖНО: Замените на ваш URL из Google Apps Script!
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxyU5-3zi45eEVXDAUevp-ah7z-drTTt28uX7ExAdvxhlP-r_8VVbL1e-2rmRNrfG-5Fg/exec';
+    
+    // Создаем скрытый iframe для отправки (обходим ограничения CORS)
+    const iframe = document.createElement('iframe');
+    iframe.style.display = 'none';
+    iframe.name = 'hidden_iframe';
+    document.body.appendChild(iframe);
+    
+    // Создаем временную форму для отправки через iframe
+    const form = document.createElement('form');
+    form.method = 'POST';
+    form.action = scriptURL;
+    form.target = 'hidden_iframe';
+    form.style.display = 'none';
+    
+    // Добавляем поля
+    const fioField = document.createElement('input');
+    fioField.type = 'hidden';
+    fioField.name = 'fio';
+    fioField.value = fio;
+    form.appendChild(fioField);
+    
+    const attendanceField = document.createElement('input');
+    attendanceField.type = 'hidden';
+    attendanceField.name = 'attendance';
+    attendanceField.value = attendance;
+    form.appendChild(attendanceField);
+    
+    document.body.appendChild(form);
+    
+    // Отправляем форму
+    form.submit();
+    
+    // Считаем, что отправка успешна (Google Apps Script обычно работает)
+    setTimeout(function() {
+        // Убираем временные элементы
+        document.body.removeChild(form);
+        document.body.removeChild(iframe);
+        
+        // Показываем сообщение об успехе
+        showMessage('✅ Спасибо! Ваш ответ записан. Ждем вас на нашем празднике! 🎉', 'success');
+        
+        // Очищаем форму
+        document.getElementById('rsvp-form').reset();
+        
+        // Разблокируем кнопку
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Отправить';
+    }, 1000);
+    
+    // Обработка ошибки (если что-то пошло не так)
+    setTimeout(function() {
+        if (document.body.contains(iframe)) {
+            // Если через 3 секунды iframe все еще существует, возможно ошибка
+            showMessage('❌ Ошибка соединения. Пожалуйста, попробуйте еще раз или напишите нам в Telegram.', 'error');
+            
+            // Разблокируем кнопку
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Отправить';
+            
+            // Убираем временные элементы
+            if (document.body.contains(form)) document.body.removeChild(form);
+            if (document.body.contains(iframe)) document.body.removeChild(iframe);
+        }
+    }, 3000);
+});
+
+// Функция для показа сообщений с разными стилями
+function showMessage(text, type) {
+    const messageDiv = document.getElementById('form-message');
+    messageDiv.innerHTML = text;
+    messageDiv.style.display = 'block';
+    
+    // Убираем предыдущие классы стилей
+    messageDiv.className = '';
+    
+    // Применяем стили в зависимости от типа
+    switch(type) {
+        case 'success':
+            messageDiv.style.backgroundColor = 'transparent';
+            messageDiv.style.color = '#155724';  // стандартный темно-зеленый
+            break;
+        case 'error':
+            messageDiv.style.backgroundColor = '#f8d7da';
+            messageDiv.style.color = '#721c24';
+            messageDiv.style.border = '1px solid #f5c6cb';
+            break;
+        case 'sending':
+            messageDiv.style.backgroundColor = '#cce5ff';
+            messageDiv.style.color = '#004085';
+            messageDiv.style.border = '1px solid #b8daff';
+            break;
+        default:
+            messageDiv.style.backgroundColor = 'transparent';
+            messageDiv.style.color = 'black';
+            messageDiv.style.border = 'none';
+    }
+}
+
+// Функция для очистки данных формы при загрузке страницы
+window.addEventListener('load', function() {
+    // Очищаем все поля формы
+    document.getElementById('rsvp-form').reset();
+    
+    // Сбрасываем радио-кнопки (на всякий случай)
+    const radios = document.querySelectorAll('input[name="attendance"]');
+    radios.forEach(radio => radio.checked = false);
+    
+    // Очищаем сообщение
+    const messageDiv = document.getElementById('form-message');
+    messageDiv.innerHTML = '';
+    messageDiv.style.display = 'none';
+});
+
+// Также очищаем форму при уходе со страницы (на случай, если пользователь обновит страницу)
+window.addEventListener('beforeunload', function() {
+    // Ничего не делаем, просто гарантируем, что при следующей загрузке сработает load
+});
+    </script>
+</body>
+</html> 
